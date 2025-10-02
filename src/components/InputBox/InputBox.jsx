@@ -15,7 +15,7 @@ const InputBox=()=>{
                 <li><input type="text" /></li>
                 <li><label htmlFor="">Price</label></li>
                 <li><input type="text" /></li>
-                <li><label htmlFor="">Keywords</label></li>
+                <li><label htmlFor="">Keywods</label></li>
                 <li><input type="text"/></li>
             </ul>
            </div>
