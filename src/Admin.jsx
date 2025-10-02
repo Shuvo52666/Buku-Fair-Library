@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/AdminHeader/Header';
-import SignIn from './components/SignIn/SignIn';
-import InputBox from './components/InputBox/InputBox';
+import SignInput from './components/SignInput/SignInput';
+
 
 
 
@@ -10,8 +10,7 @@ function Admin(){
         <>
             <section>
                 <Header />
-                <SignIn />
-                <InputBox />
+                <SignInput />
             </section>
         </>
     )
