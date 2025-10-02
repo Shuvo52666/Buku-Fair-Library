@@ -1,0 +1,109 @@
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: var(--color3);
+    height: 160px;
+    width: 100%;
+}
+.foot{
+    display: flex;
+    /* background-color: aliceblue; */
+    width: 100%;
+}
+footer .box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color4);
+    word-spacing: 7px;
+    /* background-color: #167bda; */
+}
+
+footer .box1 .footerimgbox{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: rgb(88, 170, 33); */
+    /* height: 30%; */
+    margin-bottom: 15px;
+    max-width: 30%;
+    min-width: 140px;
+}
+footer .box1 .footerimgbox img{
+    /* max-height: 80%; */
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+
+}
+
+footer .box2{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #16da7e; */
+    width: 50%;
+    justify-content: center;
+    /* padding-right: 100px; */
+    align-items: center;
+
+}
+footer .box2 span{
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color2);
+}
+footer .box2 ul{
+    /* background-color: #ed8d8d; */
+    display: flex;
+    justify-content: space-around;
+    height: 45px;
+    width: 70%;
+}
+footer .box2 ul li{
+    display: flex;
+    /* height: 60px; */
+    align-items: bottom;
+    /* background-color: #8c6767; */
+    list-style: none;
+}
+footer .box2 ul li a{
+    text-decoration: none;
+    color: var(--color4);
+    font-size: 31px;
+}
+footer .box2 ul li a i{
+    margin-top: 11px;
+    cursor: pointer;
+    /* background-color: #ECF2FF; */
+
+}
+footer .box2 ul li:nth-child(1) a{
+    color: var(--color2);
+}
+
+@media only screen and (max-width: 425px) {
+
+    footer .box2 span{
+
+        font-size: 14px;
+    }
+    footer .box2 ul li a{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    footer .box2 span{
+
+        font-size: 16px;
+    }
+    footer .box2 ul li a{
+        font-size: 25px;
+    }
+
+}

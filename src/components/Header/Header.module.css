@@ -1,0 +1,107 @@
+
+.header{
+    position: sticky;
+    top: 0px;
+    background-color: var(--color2);
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+.headerbox{
+    background-color: var(--color2);
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logobox{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* background-color: aqua; */
+    width: 80px;
+    height: 100%;
+}
+.logobox img{
+    height: 35px;
+}
+.searchbox{
+    z-index: 1;
+    background-color: var(--color2);
+    min-width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+
+}
+.searchbox input{
+    height: 40px;
+    width: 85%;
+    outline: none;
+    border: none;
+    border-radius: 6px 0px 0px 6px;
+    background-color: var(--color1);
+    padding: 0px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color3);
+}
+.searchbox input::placeholder{
+    color: var(--color4);
+    font-weight: 300;
+    
+}
+.searchbox .icon{
+    background-color: var(--color3);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 22px; */
+    border-radius: 0px 6px 6px 0px;
+    color: var(--color2);
+}
+.others{
+    display:flex ;
+    justify-content: right;
+    align-items: center;
+    /* background-color: aquamarine; */
+    width: 70px;
+    height: 100%;
+    
+    font-size: 37px;
+}
+.others a{
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color3);
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    background-color: rgb(90, 87, 168);
+  }
+  .others{
+    display: none;
+  }
+  .searchbox{
+    min-width: 77%;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  body {
+    background-color: rgb(147, 93, 154);
+  }
+
+
+}
+
+
