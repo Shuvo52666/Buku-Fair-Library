@@ -7,7 +7,7 @@ const ProductBox = ()=>{
     const[books,setbook]= useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:5000/allbooks")
+        axios.get(`${process.env.REACT_APP_API_URL}/allbooks`)
         .then(res => setbook(res.data))
         .catch(err => console.error(err));
 
