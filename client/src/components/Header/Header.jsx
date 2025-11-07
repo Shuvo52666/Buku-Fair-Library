@@ -13,7 +13,7 @@ const Header = () => {
                         <IoSearchOutline fontSize="28px"/>
                     </div>
                 </div>
-                <div className={styles.others}><a href="/admin.html" target="blank"><PiAlignLeftFill fontSize="37px" cursor="pointer"/></a></div>
+                <div className={styles.others}><a href="https://buku-fair-library-1.onrender.com/admin.html" target="blank"><PiAlignLeftFill fontSize="37px" cursor="pointer"/></a></div>
             </div>
         </header>
     )
