@@ -84,7 +84,7 @@
 .box1{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     /* background-color: aqua; */
     width: 50%;
     height: 100%;
@@ -108,10 +108,10 @@
     /* background-color: rgb(33, 148, 148); */
     padding: 2%;
     width: 90%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     align-items: center;
     list-style: none;
     font-size: 15px;
@@ -121,8 +121,9 @@
     display: flex;
     align-items: center;
     /* background-color: bisque; */
-    height: 38px;
+    height: 40px;
     width: 80%;
+    
 }
 .box1 ul li input{
     height: 100%;
@@ -133,32 +134,25 @@
     border-radius: 5px;
     padding:10px;
 }
-.box1 ul li:nth-child(2) input{
+/* .box1 ul li:nth-child(2) input{
    padding: 0px;
-   /* background-color: #16da7e; */
+   background-color: #16da7e;
 
-}
-  .box1 ul li input[type="file"]::file-selector-button {
+} */
+  /* .box1 ul li input[type="file"]::file-selector-button {
     background-color: var(--color3);
     border: none;
     color: white;
-    /* padding: 8px; */
+    padding: 8px;
     height: 100%;
     width: 50%;
     margin-right: 25px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: 400;
-  }
+  } */
 
-.box1 ul li:nth-child(13){
-    /* background-color: #16da7e; */
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
 
-}
 
 
    .cards {
