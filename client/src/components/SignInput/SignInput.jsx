@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from "axios";
 
 const SignInput = () =>{
+    console.log(REACT_APP_BACKEND_URL);
 
     const[status,set] = useState("");
     const[instat,setin] = useState("");
