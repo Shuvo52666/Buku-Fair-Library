@@ -5,7 +5,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { PiAlignLeftFill } from "react-icons/pi";
 const Header = () => {
     const openAdmin = () => {
-    window.open('https://buku-fair-library-client.onrender.com/admin.html', '_blank', 'noopener,noreferrer');
+    window.open('/admin.html', '_blank', 'noopener,noreferrer');
   };
     return(
         <header className={styles.header}>
