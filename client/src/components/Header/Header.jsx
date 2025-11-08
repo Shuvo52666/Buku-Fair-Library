@@ -15,7 +15,7 @@ const Header = () => {
                         <IoSearchOutline fontSize="28px"/>
                     </div>
                 </div>
-                <div className={styles.others}>  <Link to="/AdminMain" element ={<AdminMain/>} ><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </Link></div>
+                <div className={styles.others}> <a href="/admin" target="_blank"><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </a></div>
             </div>
         </header>
     )
