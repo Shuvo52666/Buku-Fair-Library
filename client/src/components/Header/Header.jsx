@@ -4,6 +4,9 @@ import styles from "./Header.module.css";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiAlignLeftFill } from "react-icons/pi";
 const Header = () => {
+    const openAdmin = () => {
+    window.open('/admin.html', '_blank', 'noopener,noreferrer');
+  };
     return(
         <header className={styles.header}>
            <div className={`container ${styles.headerbox}`}>  
@@ -14,7 +17,7 @@ const Header = () => {
                         <IoSearchOutline fontSize="28px"/>
                     </div>
                 </div>
-                <div className={styles.others}> <a href="/admin" target="_blank"><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </a></div>
+                <div className={styles.others}> <div onClick={openAdmin} className={styles.admin}><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </div></div>
             </div>
         </header>
     )
