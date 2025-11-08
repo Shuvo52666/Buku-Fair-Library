@@ -53,7 +53,7 @@ const SignInput = () =>{
 
 
             try {
-                await axios.post("https://buku-fair-library.onrender.com/allbooks",formData);
+                await axios.post("http://localhost:5000/allbooks",formData);
                 alert("book added successfuly");
                 setformData({
                     URL:"",
