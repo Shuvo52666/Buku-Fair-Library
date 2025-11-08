@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 import { IoSearchOutline } from "react-icons/io5";
 import { PiAlignLeftFill } from "react-icons/pi";
@@ -13,7 +14,7 @@ const Header = () => {
                         <IoSearchOutline fontSize="28px"/>
                     </div>
                 </div>
-                <div className={styles.others}><a href="admin.html" target="_blank"><PiAlignLeftFill fontSize="37px" cursor="pointer"/></a></div>
+                <div className={styles.others}>  <Link to="/admin"><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </Link></div>
             </div>
         </header>
     )
