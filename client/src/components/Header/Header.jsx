@@ -1,6 +1,6 @@
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
-import AdminMain from "./AdminMain";
+import AdminMain from "./AdminMain.jsx";
 
 import { IoSearchOutline } from "react-icons/io5";
 import { PiAlignLeftFill } from "react-icons/pi";
@@ -15,7 +15,7 @@ const Header = () => {
                         <IoSearchOutline fontSize="28px"/>
                     </div>
                 </div>
-                <div className={styles.others}>  <Link to="/AdminMain"><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </Link></div>
+                <div className={styles.others}>  <Link to="/AdminMain" element ={<AdminMain/>} ><PiAlignLeftFill fontSize="37px" cursor="pointer"/> </Link></div>
             </div>
         </header>
     )
