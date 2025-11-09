@@ -6,6 +6,7 @@ import SignInput from './components/SignInput/SignInput';
 
 
 function Admin(){
+    console.log("hello");
     return(
         <>
             <section>
