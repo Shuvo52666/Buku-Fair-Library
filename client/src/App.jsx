@@ -8,10 +8,12 @@ import Admin from './Admin';
 
 function App() {
   return (
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/Admin" element={<Admin />} />
       </Routes>
+    </BrowserRouter>  
   )
 }
 
