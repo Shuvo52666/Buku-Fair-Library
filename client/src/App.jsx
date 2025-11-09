@@ -8,11 +8,12 @@ import Admin from './Admin';
 
 function App() {
   return (
-     <Routes>
+    <>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
-
+    </>
   )
 }
 
