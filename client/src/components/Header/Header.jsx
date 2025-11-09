@@ -5,7 +5,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { PiAlignLeftFill } from "react-icons/pi";
 const Header = () => {
     const openAdmin = () => {
-    window.open('/admin', '_blank', 'noopener,noreferrer');
+    window.open('', '_blank', 'noopener,noreferrer');
   };
     return(
         <header className={styles.header}>
