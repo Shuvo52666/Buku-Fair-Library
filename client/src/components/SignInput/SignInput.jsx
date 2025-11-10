@@ -16,7 +16,7 @@ const SignInput = () =>{
 
        
 
-        if(user == "admin" && pass == "1234"){
+        if(user == "@bukuadmin" && pass == ".@d0t@."){
             set("hide");
             setin("show");
             console.log("hello admin");
@@ -80,7 +80,7 @@ const SignInput = () =>{
                 <li><input id="user" type="text" placeholder="Enter User Name.." /></li>
                 <li><label htmlFor="pass">Password</label></li>
                 <li><input id="pass" type="password" placeholder='Enter Password..'/></li>
-                <li><button className={styles.buton}  onClick={() => { enter(); infunc(); }}>Enter</button></li>
+                <li><button className={styles.buton}  onClick={() => { enter() }}>Enter</button></li>
             </ul>
         </div>
 
