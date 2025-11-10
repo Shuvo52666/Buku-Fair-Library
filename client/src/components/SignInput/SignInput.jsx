@@ -7,6 +7,7 @@ const SignInput = () =>{
 
     const[status,set] = useState("");
     const[instat,setin] = useState("");
+    const BASE_URL = "https://buku-fair-library-backend.onrender.com"; 
 
    
     const enter = () =>{
@@ -54,7 +55,7 @@ const SignInput = () =>{
 
 
             try {
-                await axios.post("http://localhost:5000/allbooks",formData);
+                await axios.post(`${BASE_URL}/allbooks`,formData);
                 alert("book added successfuly");
                 setformData({
                     URL:"",
