@@ -2,10 +2,14 @@ import mongoose from 'mongoose';
 import express from "express";
 import cors from "cors";
 import Book from './models/book.js';
+import dotenv from "dotenv";
+
+
+dotenv.config();
 
 // connect mongodb// bukufairlibrary // 5481shuvo_db_user
 // mongodb+srv://5481shuvo_db_user:bukufairlibrary@cluster0.3y5escz.mongodb.net/bookStore?appName=Cluster0
-const MONGO_URI = "mongodb+srv://5481shuvo_db_user:bukufairlibrary@cluster0.3y5escz.mongodb.net/bookStore?appName=Cluster0";
+const MONGO_URI = process.env.MONGO_URI;
 ;
 await mongoose.connect(MONGO_URI)
 .then(
@@ -45,8 +49,13 @@ app.get("/allbooks",async(req,res)=>{
   res.json(abooks);
 })
 
+// default
+app.get("/", (req, res) => {
+  res.send(" BukuFair Backend is Running Successfully!");
+});
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
 
 
 
