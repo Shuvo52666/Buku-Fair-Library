@@ -10,7 +10,7 @@ dotenv.config();
 // connect mongodb// bukufairlibrary // 5481shuvo_db_user
 // mongodb+srv://5481shuvo_db_user:bukufairlibrary@cluster0.3y5escz.mongodb.net/bookStore?appName=Cluster0
 const MONGO_URI = process.env.MONGO_URI;
-;
+
 await mongoose.connect(MONGO_URI)
 .then(
     (resolve) => {
