@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 // import Card from "./Card";
 
-const ProductBox = ()=>{
+const ProductBox = ({searchTerm})=>{
     const[books,setbook]= useState([]);
     const BASE_URL = "https://buku-fair-library-backend.onrender.com"; // http://localhost:5000
 
@@ -14,11 +14,16 @@ const ProductBox = ()=>{
 
     },[]);
     console.log(books);
+     console.log(searchTerm + " from books");
+
+    const filteredBooks = books.filter((book) =>
+        book.keywords.toUpperCase().includes(searchTerm.toUpperCase())
+    );
 
     return(
         <div className={styles.productbox}>
             {
-                books.map((book) => (
+                filteredBooks.map((book) => (
                     <div key={book._id} className={styles.cards}>
                         <div className={styles.imagebox}><img src={book.URL} alt="image" /></div>
                         <div className={styles.details}>
