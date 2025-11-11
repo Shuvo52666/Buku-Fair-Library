@@ -33,9 +33,44 @@ app.use(express.json());
 
 app.post("/allbooks",async(req ,res)=>{
   try{
-    const newbook = new Book(req.body);
-    await newbook.save();
-    res.status(201).json(newbook);
+
+    const { URL, name, author, status, price, keywords } = req.body;
+
+    // Normalize all fields to trimmed strings or empty
+    const bookData = {
+      URL: URL?.trim() || "",
+      name: name?.trim() || "",
+      author: author?.trim() || "",
+      status: status?.trim() || "",
+      price: price?.trim() || "",
+      keywords: keywords?.trim() || "",
+    };
+
+    // Find all existing books
+    const existingBooks = await Book.find();
+
+    // Check if there is ANY book where all fields match (including empty)
+    const isDuplicate = existingBooks.some(b =>
+      (b.URL || "") === bookData.URL &&
+      (b.name || "") === bookData.name &&
+      (b.author || "") === bookData.author &&
+      (b.status || "") === bookData.status &&
+      (b.price || "") === bookData.price &&
+      (b.keywords || "") === bookData.keywords
+    );
+
+    if (isDuplicate) {
+      console.log("balerbal");
+      return res.status(400).json({ message: "from server exact book already exists!" });
+    }else{
+      console.log("exist");
+      const newbook = new Book(req.body);
+      await newbook.save();
+      res.status(201).json(newbook);
+      
+
+    }
+
 
   }catch (error){
     console.error(error);

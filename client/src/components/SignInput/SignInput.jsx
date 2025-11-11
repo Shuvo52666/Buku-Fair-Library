@@ -7,6 +7,7 @@ const SignInput = () =>{
 
     const[status,set] = useState("");
     const[instat,setin] = useState("");
+    //https://buku-fair-library-backend.onrender.com
     const BASE_URL = "https://buku-fair-library-backend.onrender.com"; 
 
    
@@ -66,8 +67,12 @@ const SignInput = () =>{
                     keywords:"",
                 })
             } catch (error) {
-                console.error(error);
-                alert("Failed to add book!");
+                if (error.response && error.response.status === 400) {
+                    alert("This book already exists!");
+                } else {
+                    alert("Failed to add book!");
+                }
+
             }
 
       }
