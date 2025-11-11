@@ -38,12 +38,12 @@ app.post("/allbooks",async(req ,res)=>{
 
     // Normalize all fields to trimmed strings or empty
     const bookData = {
-      URL: URL?.trim() || "",
+      // URL: URL?.trim() || "",
       name: name?.trim() || "",
       author: author?.trim() || "",
       status: status?.trim() || "",
       price: price?.trim() || "",
-      keywords: keywords?.trim() || "",
+      // keywords: keywords?.trim() || "",
     };
 
     // Find all existing books
@@ -51,12 +51,12 @@ app.post("/allbooks",async(req ,res)=>{
 
     // Check if there is ANY book where all fields match (including empty)
     const isDuplicate = existingBooks.some(b =>
-      (b.URL || "") === bookData.URL &&
+      // (b.URL || "") === bookData.URL &&
       (b.name || "") === bookData.name &&
       (b.author || "") === bookData.author &&
       (b.status || "") === bookData.status &&
-      (b.price || "") === bookData.price &&
-      (b.keywords || "") === bookData.keywords
+      (b.price || "") === bookData.price
+      // (b.keywords || "") === bookData.keywords
     );
 
     if (isDuplicate) {
