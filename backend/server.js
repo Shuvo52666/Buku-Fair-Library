@@ -52,10 +52,10 @@ app.post("/allbooks",async(req ,res)=>{
     // Check if there is ANY book where all fields match (including empty)
     const isDuplicate = existingBooks.some(b =>
       // (b.URL || "") === bookData.URL &&
-      (b.name || "") === bookData.name &&
-      (b.author || "") === bookData.author &&
-      (b.status || "") === bookData.status &&
-      (b.price || "") === bookData.price
+      (b.name.toLowerCase() || "") === bookData.name.toLowerCase() &&
+      (b.author.toLowerCase() || "") === bookData.author.toLowerCase() &&
+      (b.status.toLowerCase() || "") === bookData.status.toLowerCase() &&
+      (b.price.toLowerCase() || "") === bookData.price.toLowerCase()
       // (b.keywords || "") === bookData.keywords
     );
 
