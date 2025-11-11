@@ -42,9 +42,13 @@ const SignInput = () =>{
         setformData({...formData ,[e.target.name]: e.target.value})
     }
 
+    const [isLoading, setIsLoading] = useState(false);
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
+        if (isLoading) return;
+        setIsLoading(true);
             // const bookimg =document.getElementById("BookImage").value;
             // const bookname =document.getElementById("BookName").value;
             // const author =document.getElementById("AuthorName").value;
@@ -73,7 +77,9 @@ const SignInput = () =>{
                     alert("Failed to add book!");
                 }
 
-            }
+            }finally {
+            setIsLoading(false);
+        }
 
       }
 
@@ -118,7 +124,7 @@ const SignInput = () =>{
                                 </ul>
                             </div>
                         </div>
-                        <button className={styles.buton} onClick={handleSubmit} >Submit</button>
+                        <button className={styles.buton} onClick={handleSubmit} >{isLoading ? "Adding..." : "Submit"}</button>
                    </div>
                 </div>
         </>
