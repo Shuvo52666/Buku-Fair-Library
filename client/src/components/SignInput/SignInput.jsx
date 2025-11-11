@@ -8,7 +8,7 @@ const SignInput = () =>{
     const[status,set] = useState("");
     const[instat,setin] = useState("");
     //https://buku-fair-library-backend.onrender.com
-    const BASE_URL = "http://localhost:5000"; 
+    const BASE_URL = "https://buku-fair-library-backend.onrender.com"; 
 
    
     const enter = () =>{
