@@ -6,11 +6,14 @@ import axios from "axios";
 const ProductBox = ({searchTerm})=>{
     const[books,setbook]= useState([]);
     const BASE_URL = "https://buku-fair-library-backend.onrender.com"; // http://localhost:5000
-
+    const [isLoading, setIsLoading] = useState(true);
+    
     useEffect(()=>{
+        setIsLoading(true);
         axios.get(`${BASE_URL}/allbooks`)
         .then(res => setbook(res.data))
-        .catch(err => console.error(err));
+        .catch(err => console.error(err))
+        .finally(() => setIsLoading(false));
 
     },[]);
     console.log(books);
@@ -22,7 +25,9 @@ const ProductBox = ({searchTerm})=>{
 
     return(
         <div className={styles.productbox}>
-            {
+            {   isLoading ? (
+                <p>loading...</p>
+            ): filteredBooks.length > 0 ? (
                 filteredBooks.map((book) => (
                     <div key={book._id} className={styles.cards}>
                         <div className={styles.imagebox}><img src={book.URL} alt="image" /></div>
@@ -36,6 +41,10 @@ const ProductBox = ({searchTerm})=>{
                         </div>
                     </div>
                 ))
+            ) : (
+                <p>no books found</p>
+            )
+                
             }
            
         </div>
