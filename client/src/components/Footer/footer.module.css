@@ -49,19 +49,24 @@ footer .box2{
     width: 50%;
     justify-content: center;
     /* padding-right: 100px; */
-    align-items: center;
+    align-items: end;
 
 }
 footer .box2 span{
     margin-bottom: 30px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--color2);
+    /* background-color: aqua; */
+    line-height: 19px;
+    
 }
 footer .box2 ul{
     /* background-color: #ed8d8d; */
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: end;
+    gap: 10%;
     height: 45px;
     width: 70%;
 }
@@ -89,12 +94,27 @@ footer .box2 ul li:nth-child(1) a{
 
 @media only screen and (max-width: 425px) {
 
-    footer .box2 span{
+    footer .box1 span{
 
-        font-size: 14px;
+        font-size: 13px;
+    }
+    footer .box2 span{
+        font-size:17px;
+        margin-bottom: 17px;
     }
     footer .box2 ul li a{
-        font-size: 18px;
+        font-size: 27px;
+    }
+
+    footer .box2 ul{
+        /* background-color: aqua; */
+        max-width: 70px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-right: 17px;
+        gap: 10px;
+        line-height: 2px;
+        
     }
 }
 @media only screen and (min-width: 426px) and (max-width: 768px) {

@@ -11,7 +11,7 @@ const Footer= () =>{
             <div className={`container ${styles.foot}`}>
                 <div className={styles.box1}>
                 <div className={styles.footerimgbox}>
-                    <img src="/photos/BUKU FAIR COVER2.png" alt="bukufair logo"/>
+                    <img src="/photos/bukufooterwhitelogo.png" alt="bukufair logo"/>
                 </div>
                     <span>We are selling mirrors in a land of the blind</span>
                 </div>
