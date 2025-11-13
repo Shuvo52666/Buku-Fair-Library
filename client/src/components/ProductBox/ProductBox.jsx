@@ -5,7 +5,7 @@ import axios from "axios";
 
 const ProductBox = ({searchTerm})=>{
     const[books,setbook]= useState([]);
-    const BASE_URL = "https://buku-fair-library-backend.onrender.com"; // http://localhost:5000
+    const BASE_URL = "https://buku-fair-library-backend.onrender.co"; // http://localhost:5000
     const [isLoading, setIsLoading] = useState(true);
     
     useEffect(()=>{
@@ -26,7 +26,7 @@ const ProductBox = ({searchTerm})=>{
     return(
         <div className={styles.productbox}>
             {   isLoading ? (
-                <p>loading...</p>
+               <div className={styles.loading}><div className="loader"></div></div>
             ): filteredBooks.length > 0 ? (
                 filteredBooks.map((book) => (
                     <div key={book._id} className={styles.cards}>
@@ -42,7 +42,8 @@ const ProductBox = ({searchTerm})=>{
                     </div>
                 ))
             ) : (
-                <p>no books found</p>
+                // <div className={styles.loading}> <div className="loader"></div></div>
+                <div className={styles.loading}> <div className="errorloader"></div><span className={styles.errormsg} >No books found</span></div>
             )
                 
             }

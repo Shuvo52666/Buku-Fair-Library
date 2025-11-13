@@ -1,3 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+
+.loading{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: rgb(162, 255, 0); */
+   
+
+
+
+}
+.errormsg{
+    /* background-color: aqua; */
+    font-size: 28.5px;
+    /* font-weight: 700; */
+    /* margin: 10px; */
+    top: 20px;
+    color: #454545b8;
+    font-family: "VT323",monospace;
+
+
+    
+}
+
 .productbox {
     /* background-color: #16da7e; */
     margin-top: 15px;
