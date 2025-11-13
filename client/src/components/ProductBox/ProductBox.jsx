@@ -5,7 +5,7 @@ import axios from "axios";
 
 const ProductBox = ({searchTerm})=>{
     const[books,setbook]= useState([]);
-    const BASE_URL = "https://buku-fair-library-backend.onrender.co"; // http://localhost:5000
+    const BASE_URL = "https://buku-fair-library-backend.onrender.com"; // http://localhost:5000
     const [isLoading, setIsLoading] = useState(true);
     
     useEffect(()=>{
