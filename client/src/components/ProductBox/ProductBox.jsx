@@ -66,7 +66,7 @@ const ProductBox = ({ searchTerm }) => {
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://buku-fair-library-backend.onrender.com";
   const LIMIT = 10;
 
   const loadBooks = async () => {
