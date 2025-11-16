@@ -79,10 +79,29 @@ app.post("/allbooks",async(req ,res)=>{
 });
 
 //get books
-app.get("/allbooks",async(req,res)=>{
-  const abooks=await Book.find();
-  res.json(abooks);
-})
+// GET /allbooks?limit=10&lastId=...
+app.get("/allbooks", async (req, res) => {
+  try {
+    const limit = parseInt(req.query.limit) || 10;
+    const lastId = req.query.lastId;
+
+    let query = {};
+    if (lastId) {
+      query._id = { $gt: lastId }; // fetch books _after_ lastId
+    }
+
+    const books = await Book.find(query)
+      .sort({ _id: 1 })
+      .limit(limit);
+
+    const count = await Book.countDocuments();
+
+    res.json({ books, count });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 
 // default
 app.get("/", (req, res) => {
