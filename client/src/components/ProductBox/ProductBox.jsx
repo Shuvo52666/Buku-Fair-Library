@@ -46,7 +46,7 @@ const ProductBox = ({searchTerm})=>{
                 <div className={styles.loading}> <div className="errorloader"></div><span className={styles.errormsg} >No books found</span></div>
             )
                 
-            }
+        }
            
         </div>
     )
