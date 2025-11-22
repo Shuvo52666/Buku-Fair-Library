@@ -80,7 +80,7 @@ app.post("/allbooks",async(req ,res)=>{
 
 //get books
 app.get("/allbooks",async(req,res)=>{
-  const abooks=await Book.find();
+  const abooks=await Book.find().sort({ _id: -1 });
   res.json(abooks);
 })
 
